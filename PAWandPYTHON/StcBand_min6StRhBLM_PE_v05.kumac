@@ -1,0 +1,236 @@
+MACRO GRAPHICS
+*
+ ZONE 1 1
+ opt zfl1
+ opt nbox
+ opt ndat
+*opt grid
+ set cshi 0.01 ! character shift between two pass
+ set pass 4 ! number of pass for software characters
+ set xwin 1.5 ! distance between left and right pictures
+ set ywin 1.5 ! distance between up and down pictures
+ set ymgu 0.5 ! y margin up 
+ set ymgl 2.0 ! y margin down
+ set xmgr 0.3 ! x margin right
+ set xmgl 2.5 ! x margin left
+ set asiz 0.5 ! size of the labels of x and y axis
+ set vsiz 0.4 ! size of the tick labels of x and y axis
+ set xlab 1.8 ! distance Y axis to label
+ set ylab 1.3 ! distance X axis to label
+ set xval 0.3 ! distance between the Y axis and the axis values
+ set yval 0.20 ! distance between the X axis and the axis values
+* set gfon -20 ! global title font in Times-Bold
+ title_gl ''
+*
+ve/cr data1(4,117)
+ve/cr data2(4,60)
+*
+ve/read data1 'paw_Stpp2017_TOTEMeATLAS_cut5.dat'
+ve/read data2 'paw_Stpacut5.dat'
+*
+ve/copy data1(1,001:0117) x1
+ve/copy data1(2,001:0117) y1
+ve/copy data1(3,001:0117) e1
+ve/copy data1(4,001:0117) q1
+*
+ve/copy data2(1,001:060) x2
+ve/copy data2(2,001:060) y2
+ve/copy data2(3,001:060) e2
+ve/copy data2(4,001:060) q2
+*
+* OUTPUT VECTORS
+*
+ve/cr curva1(2,1236)
+ve/cr curva2(2,1236)
+*
+ve/read curva1 'fort.5105'
+ve/read curva2 'fort.5115'
+*
+ve/copy curva1(1,01:01236) x1o3
+ve/copy curva1(2,01:01236) y1o3
+*
+ve/copy curva2(1,01:01236) x1o4
+ve/copy curva2(2,01:01236) y1o4
+*
+ OPTION logx
+ OPTION liny
+ OPTION tic
+* OPTION grid
+*
+ IGSET ltyp 1
+ IGSET plci 1
+ IGSET pmci 1
+*
+ NULL 4.0 20000.0 30.0 120.0
+*
+ve/read w,z 'fort.51031'
+ve/read w2,z2 'fort.51041'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+*  FAREA 824 w4 Z4
+graph 824 w4 Z4 F
+*
+*
+*
+ve/read w,z 'fort.51032'
+ve/read w2,z2 'fort.51042'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+graph 824 w4 Z4 F
+*
+*
+*
+ve/read w,z 'fort.51033'
+ve/read w2,z2 'fort.51043'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+graph 824 w4 Z4 F
+*
+*
+*
+ve/read w,z 'fort.51131'
+ve/read w2,z2 'fort.51141'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+graph 824 w4 Z4 F
+*
+*
+*
+ve/read w,z 'fort.51132'
+ve/read w2,z2 'fort.51142'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+graph 824 w4 Z4 F
+*
+*
+*
+ve/read w,z 'fort.51133'
+ve/read w2,z2 'fort.51143'
+ve/cr z4(824)
+do i=1,824
+ve/copy z([i]) z4([i])
+enddo
+do j=1,412
+ii=825-[j]
+  ve/copy z2([j]) z4([ii])
+enddo
+ve/cr w4(824)
+do i=1,824
+ve/copy w([i]) w4([i])
+enddo
+do j=1,412
+ve/copy w([i]) w4([i])
+ii=825-[j]
+ve/copy w2([j]) w4([ii])
+enddo
+SET FACI 3
+SET FAIS 1
+set fasi 144
+graph 824 w4 Z4 F
+*
+*
+*
+ GRAPH/HPLOT/ERRORS x1 y1 q1 e1 117 20 0.20
+ GRAPH/HPLOT/ERRORS x2 y2 q2 e2 60 24 0.20
+ atitle '"R#s  (GeV)'  '[s]?tot!  (mb)'
+key 4000 50 24 'pp&^-' 0.2
+key 4000 45 20 'pp' 0.2
+*
+ IGSET ltyp 1
+ IGSET plci 1
+ GRAPH 1236 x1o3 y1o3 l
+*
+ IGSET ltyp 1
+ IGSET plci 1
+ GRAPH 1236 x1o4 y1o4 l
+*
