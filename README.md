@@ -10,10 +10,10 @@
   
     $ paw
 
-  and click (Enter). The, to create the figure use the following line:
+  and click (Enter). Then, to create the figure use the following line:
   
     exe FILE_NAME.kumac
     
-  then, to save the figure in .eps extension:
+  to save the figure in .eps extension:
   
     p/print FILE_NAME.eps
