@@ -1,1 +1,19 @@
 # Medium
+
+## PAWansPYTHON (link here: add!)
+  
+  To use PAW first you need to isntall the CERNlib package. If you're using Ubuntu-Linux than you can do it with the following code:
+  
+    $ sudo apt-get install cernlib*
+   
+  Once you installed it, type on the terminal:
+  
+    $ paw
+
+  and click (Enter). The, to create the figure use the following line:
+  
+    exe FILE_NAME.kumac
+    
+  then, to save the figure in .eps extension:
+  
+    p/print FILE_NAME.eps
