@@ -1,6 +1,6 @@
 # Medium
 
-## PAWansPYTHON (link here: add!)
+## PAWandPYTHON (link here: add!)
   
   To use PAW first you need to isntall the CERNlib package. If you're using Ubuntu-Linux than you can do it with the following code:
   
