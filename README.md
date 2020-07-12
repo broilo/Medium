@@ -1,6 +1,6 @@
 # Medium
 
-## How to create cool figures with Matplotlib (link here: add!)
+## How to create cool figures with Matplotlib (link here: https://medium.com/@mateus.broilo90/how-to-create-cool-figures-with-matplotlib-fafb58ffd39f)
 Folder: .../Medium/PAWandPYTHON 
   
   To use PAW first you need to isntall the CERNlib package. If you're using Ubuntu-Linux than you can do it with the following code:
